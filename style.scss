@@ -1,0 +1,365 @@
+:root{
+    --text: 'Roboto', sans-serif;
+    --header: 'Lato', sans-serif;
+    --p-color: #1d1d1d;
+    --p2-color: lightgray;
+    --s-color: whitesmoke;
+    --s2-color: orange;
+    --text-color: #0e0e0e;
+    --shadow: black;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    color: var(--text-color);
+}
+
+body{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-x: hidden;
+    .everything{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .nav-bar{
+            width: 100%;
+            display: flex;
+            padding: 1vh;
+            align-items: center;
+            justify-content: center;
+            border-bottom: .2vh solid var(--p2-color);
+            nav{
+                width: 60%;
+                padding: 1vh;
+                display: flex;
+                align-content: center;
+                justify-content: space-between;
+                .logo{
+                    font-size: 2vh;
+                    font-family: var(--text);
+                }
+                .nav-list{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    list-style: none;
+                }
+                .nav-options{
+                    font-size: 1.5vh;
+                    padding: 0 2vh;
+                    font-family: var(--text);
+                }
+            }
+        }
+        //Start of search part
+        .search-part{
+            width: 100%;
+            padding: 10vh 1vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .search-whole{
+                width: 60%;
+                padding: 2vh;
+                border-radius: 2vh;
+                border: .2vh solid var(--p2-color);
+                display: flex;
+                flex-direction: column;
+                gap:2vh;
+                align-items: center;
+                justify-content: center;
+                .search-header{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 2vh;
+                    width: 100%;
+                    .top-header{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;   
+                        font-size: 5vh;
+                        font-weight: bold;
+                        font-family: var(--header);
+                    }
+                    .sub-header{    
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 3vh;
+                        font-family: var(--text);
+                        text-decoration: 1vh underline var(--p-color);
+                    }
+                }
+                .location-part{
+                    width:100%;
+                    padding: 2vh 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 5vh;
+                    .location-picker{
+                        width: 60%;
+                        height: 3vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        input{
+                            width: 100%;
+                            border-radius: 1vh;
+                            border: .1vh solid var(--p-color);
+                            height: 100%;
+                            padding: 1vh;
+                            text-align: left;
+                            font-size: 1.7vh;
+                            font-family: var(--text);
+                        }
+                    }
+                    .check-in-out-selector{
+                        height: 3vh;
+                        width: 20%;
+                        display: flex;
+                        align-items:center;
+                        justify-content: center;
+                        gap:1vh;
+                        input{
+                            width: 100%;
+                            border-radius: 1vh;
+                            border: .1vh solid var(--p-color);
+                            height: 100%;
+                            padding: 1vh;   
+                            font-size: 1.7vh;
+                            font-family: var(--text);
+                        }
+                    }
+                    .search-button{
+                        width: 7vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 7vh;
+                        border-radius: 100%;
+                        background:var(--s2-color);
+                        font-size: 2vh;
+                        color:var(--s-color);
+                        font-family: var(--text);
+                        font-weight: bold;
+                        img{
+                            width: 3vh;
+                            height: 3vh;
+                            object-fit: cover;
+                        }
+                    }
+            
+                }
+           
+            }
+        }
+        //End of Search part
+        //Start of OFfer part
+        .offer-part{
+            width:100%;
+            padding: 2vh 1vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .offer-whole{
+                width: 60%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 1vh;
+                align-items: center;
+                justify-content: flex-start;
+                .offer-whole-header{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    width: 100%;
+                    padding: 1vh;
+                    .offer-whole-top-header{
+                        font-size: 3vh;
+                        font-family: var(--header);         
+                    }
+                    .offer-whole-sub-header{
+                        font-size: 2vh;
+                        opacity: 50%;
+                        font-family: var(--text);
+                    }
+                }
+                .offer-details{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 1%;
+                    .offers{
+                        width: 48%;
+                        display: flex;
+                        border:.2vh solid var(--p2-color);
+                        background: var(--s2-color);
+                        box-shadow: .5vh .5vh var(--shadow);
+                        padding: 3vh;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        .offers-header{
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            padding: 0 2vh;
+                            font-size: 3vh;
+                            font-family: var(--header);
+                        }
+                        .offers-intro{
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            font-size: 2vh;
+                            font-family: var(--text);
+                        }
+                    }
+                }
+                
+            }
+        }
+        //End of Offer part
+        //Start of Destination part
+        .destination-part{
+            width: 100%;
+            padding: 10vh 1vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .destination-part-whole{
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                gap: 3vh;
+                align-items: flex-start;
+                justify-content: flex-start;
+                .destination-part-whole-header{  
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    .destination-part-top-header{
+                        font-size: 3vh;
+                        padding: 1vh;
+                        font-family: var(--header);
+                    }
+                    .destination-part-sub-header{
+                        font-size: 2vh;
+                        opacity: 50%;
+                        padding: 0 1vh;
+                        font-family: var(--text);
+                    }
+                }
+                .destination-list{
+                    width: 100%;
+                    padding: 1vh;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items:center;
+                    justify-content: center;
+                    .destination{
+                        width:50%;
+                        height: 40vh;
+                        position: relative;
+                        overflow: hidden;
+                        .destination-photo{
+                            width: 100%;
+                            height: 100%;
+                            overflow:hidden;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        .destination-info{
+                            position: absolute;
+                            top:0;
+                            transition: .2s ease-in-out;
+                            height: 100%;
+                            width:100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: rgba($color: black, $alpha: 0.3);
+                            .destination-name{
+                                padding: 2vh;
+                                text-align: center;
+                                text-transform: uppercase;
+                                font-size: 7vh;
+                                color:var(--s2-color);
+                                font-family: var(--header);
+                                text-shadow: .5vh .5vh var(--shadow);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //End of Destination part
+
+        //Start of footer
+        footer{
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--s2-color);
+            .footer-whole{
+                width: 60%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                gap: 1vh;
+                justify-content: center;
+                .company{
+                    padding: 2vh;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    gap: 2vh;
+                    .company-header{
+                        font-size: 2vh;
+                        font-family: var(--header);
+                    }
+                    ul{
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        gap:2vh;
+                        li{
+                            font-size: 1.5vh;
+                            font-family: var(--text);
+                        }
+                    }
+                }
+            }
+        }
+        //End of footer
+     
+    }
+}
