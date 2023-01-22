@@ -7,6 +7,10 @@
     --s2-color: orange;
     --text-color: #0e0e0e;
     --shadow: black;
+
+    --p-width: 50%;
+    --header-font-size: 2vh;
+    --text-font-size: 1.7vh;
 }
 
 *{
@@ -28,52 +32,58 @@ body{
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        .nav-bar{
-            width: 100%;
-            display: flex;
-            padding: 1vh;
-            align-items: center;
-            justify-content: center;
-            background: var(--s2-color);
-            nav{
-                width: 60%;
-                padding: 1vh;
-                display: flex;
-                align-content: center;
-                justify-content: space-between;
-                .logo{
-                    font-size: 2vh;
-                    font-family: var(--text);
-                }
-                .nav-list{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    list-style: none;
-                }
-                .nav-options{
-                    font-size: 1.5vh;
-                    padding: 0 2vh;
-                    font-family: var(--text);
-                }
-            }
-        }
         //Start of search part
         .search-part{
             width: 100%;
-            height: 30vh;
+            height: 25vh;
             position: relative;
             margin-bottom: 10vh;
-            padding: 2vh 0;
+            padding: 1vh;
+            gap: 2vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            background: var(--s2-color);
+            justify-content: flex-start;
+            background-image: url('images/mountain.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            .nav-bar{
+                width: 100%;
+                display: flex;
+                padding: 1vh;
+                align-items: center;
+                justify-content: center;
+                nav{
+                    width: var(--p-width);
+                    padding: 1vh;
+                    display: flex;
+                    align-content: center;
+                    justify-content: space-between;
+                    .logo{
+                        font-size: var(--header-font-size);
+                        font-weight: bold;
+                        font-family: var(--header);
+                    }
+                    .nav-list{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        list-style: none;
+                    }
+                    .nav-options{
+                        font-size: 1.5vh;
+                        font-weight: bold;
+                        padding: 0 2vh;
+                        font-family: var(--text);
+                    }
+                }
+            }
+            
             .search-whole{
-                width: 60%;
+                width: var(--p-width);
                 padding: 2vh;
-                border-radius: 2vh;
                 display: flex;
                 flex-direction: column;
                 gap:6vh;
@@ -100,17 +110,19 @@ body{
                         justify-content: center;
                         font-size: 3vh;
                         font-family: var(--text);
-                        text-decoration: 1vh underline var(--p-color);
+                        text-decoration: .5vh underline var(--p-color);
                     }
                 }
                 .location-part{
-                    width:60%;
-                    height: 7vh;
+                    width: var(--p-width);
+                    padding: .5vh;
+                    height: 5vh;
                     position: absolute;
                     bottom: -10%;
-                    left: 50%;
-                    transform: translate(-50%,10%);
-                    background: var(--s-color);
+                    left: var(--p-width);
+                    gap: .5vh;
+                    transform: translate(-49%,10%);
+                    background: var(--p-color);
                     box-shadow: 0vh 0vh 1vh var(--shadow);
                     display: flex;
                     align-items: center;
@@ -119,18 +131,75 @@ body{
                     .location-picker{
                         width: 100%;
                         height: 100%;
+                        position: relative;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         input{
                             width: 100%;
                             height: 100%;
+                            padding-left: 4vh;
                             text-align: left;
-                            font-size: 1.7vh;
+                            font-size: var(--text-font-size);
                             font-family: var(--text);
+                            border: none;
+                            outline: none;
+                        }
+                        .place-holder{
+                            position: absolute;
+                            pointer-events: none;
+                            width: 100%;
+                            left: 5%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            font-size: var(--text-font-size);
+                            font-family: var(--text);
+                            img{
+                                opacity: 50%;
+                                width: 2vh;
+                                height: 2vh;
+                            }
                         }
                     }
                     .check-in-out-selector{
+                        position: relative;
+                        height: 100%;
+                        width: 60%;
+                        display: flex;
+                        align-items:center;
+                        justify-content: center;
+                        gap:1vh;
+                        input{
+                            width: 100%;
+                            height: 100%;
+                            font-size: var(--text-font-size);
+                            text-align: left;
+                            padding-left: 1.5vh;
+                            font-family: var(--text);
+                            border: none;
+                            outline: none;
+                        }
+                        .place-holder{
+                            position: absolute;
+                            pointer-events: none;
+                            width: 100%;
+                            left: 5%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            font-size: var(--text-font-size);
+                            font-family: var(--text);
+                            img{
+                                opacity: 50%;
+                                width: 2vh;
+                                height: 2vh;
+                            }
+                        }
+                    }
+                    //Guest COunter
+                    .guest-counter{
+                        position: relative;
                         height: 100%;
                         width: 40%;
                         display: flex;
@@ -140,9 +209,28 @@ body{
                         input{
                             width: 100%;
                             height: 100%;
-                            font-size: 1.7vh;
-                            text-align: center;
+                            font-size: var(--text-font-size);
+                            text-align: left;
+                            padding-left: 1.2vh;
                             font-family: var(--text);
+                            border: none;
+                            outline: none;
+                        }
+                        .place-holder{
+                            position: absolute;
+                            pointer-events: none;
+                            width: 100%;
+                            left: 5%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            font-size: var(--text-font-size);
+                            font-family: var(--text);
+                            img{
+                                opacity: 50%;
+                                width: 2vh;
+                                height: 2vh;
+                            }
                         }
                     }
                     .search-button{
@@ -177,7 +265,7 @@ body{
             align-items: center;
             justify-content: center;
             .offer-whole{
-                width: 60%;
+                width: var(--p-width);
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
@@ -192,11 +280,11 @@ body{
                     width: 100%;
                     padding: 1vh;
                     .offer-whole-top-header{
-                        font-size: 3vh;
+                        font-size: 2.5vh;
                         font-family: var(--header);         
                     }
                     .offer-whole-sub-header{
-                        font-size: 2vh;
+                        font-size: var(--text-font-size);
                         opacity: 50%;
                         font-family: var(--text);
                     }
@@ -209,29 +297,49 @@ body{
                     gap: 1%;
                     .offers{
                         width: 48%;
+                        height: 10vh;
+                        position: relative;
                         display: flex;
                         border:.2vh solid var(--p2-color);
-                        background: var(--s2-color);
-                        box-shadow: .5vh .5vh var(--shadow);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-image: url('images/hotel-room-2.jpg');
                         padding: 3vh;
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
+                        &:nth-child(2)
+                        {
+                            background-image: url('images/hotel-bedsheet.jpg');
+                        }
+                        .offers-overlay{
+                            z-index: 0;
+                            position: absolute;
+                            left:0;
+                            width: 100%;
+                            height: 100%;
+                            background: linear-gradient(to right,var(--shadow),transparent);
+                        }
                         .offers-header{
+                            z-index: 1;
                             width: 100%;
                             display: flex;
                             align-items: center;
                             justify-content: flex-start;
                             padding: 0 2vh;
                             font-size: 3vh;
+                            color: var(--s-color);
                             font-family: var(--header);
                         }
                         .offers-intro{
+                            z-index: 1;
                             width: 100%;
                             display: flex;
                             align-items: center;
                             justify-content: flex-start;
                             font-size: 2vh;
+                            color: var(--s-color);
                             font-family: var(--text);
                         }
                     }
@@ -240,6 +348,120 @@ body{
             }
         }
         //End of Offer part
+        //Start of Hotel Part
+        .hotel-part{
+            padding-top: 5vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .hotel-part-whole{
+                width: var(--p-width);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                .popular-part{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 1vh;
+                    padding: 1vh;
+                    .popular-part-header{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        padding: 1vh;
+                        .popular-part-top-header{
+                            font-size: var(--header-font-size);
+                            font-family: var(--header);
+                        }
+                        .popular-part-sub-header{
+                            opacity: 50%;
+                            font-size: var(--text-font-size);
+                            font-family: var(--text);
+                        }
+                    }
+                    .popular-hotels{
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 1.5vh;
+                        .hotel{
+                            width: 30vh;
+                            height: 35vh;
+                            border: .2vh solid var(--p2-color);
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            .hotel-image{
+                                width: 100%;
+                                height: 30vh;
+                                overflow: hidden;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                            .hotel-info{
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                justify-content: flex-start;
+                                .hotel-name{
+                                    padding: 1vh 2vh;
+                                    width: 100%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    justify-content: flex-start;
+                                    .hotel-name-part{
+                                        text-transform: capitalize;
+                                        font-size: var(--text-font-size);
+                                        font-family: var(--header);    
+                                    }
+                                    .hotel-address-part{
+                                        opacity: 50%;
+                                        font-size: var(--text-font-size);
+                                        font-family: var(--text);
+                                    }
+                                }
+                                .price-range{
+                                    width: 100%;
+                                    padding: 0 2vh 1vh 2vh;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    gap: 1vh;
+                                    .price-range-header{
+                                        font-size: var(--text-font-size);
+                                        font-family: var(--text);
+                                        opacity: 50%;
+                                    }
+                                    .price{
+                                        font-size: var(--text-font-size);
+                                        font-family: var(--text);
+                                        font-weight: bold;
+                                    }
+                                }
+
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+        //End of Hotel Part
         //Start of Destination part
         .destination-part{
             width: 100%;
@@ -249,7 +471,7 @@ body{
             align-items: center;
             justify-content: center;
             .destination-part-whole{
-                width: 60%;
+                width: var(--p-width);
                 display: flex;
                 flex-direction: column;
                 gap: 3vh;
@@ -261,30 +483,52 @@ body{
                     width: 100%;
                     align-items: flex-start;
                     justify-content: flex-start;
+                    padding: 1vh;
                     .destination-part-top-header{
-                        font-size: 3vh;
-                        padding: 1vh;
+                        font-size: 2.5vh;
                         font-family: var(--header);
                     }
                     .destination-part-sub-header{
-                        font-size: 2vh;
+                        font-size: var(--text-font-size);
                         opacity: 50%;
-                        padding: 0 1vh;
                         font-family: var(--text);
                     }
                 }
                 .destination-list{
                     width: 100%;
-                    padding: 1vh;
                     display: flex;
                     flex-wrap: wrap;
                     align-items:center;
                     justify-content: center;
+                    gap: 1vh;
                     .destination{
-                        width:50%;
-                        height: 40vh;
+                        width:30vh;
+                        height: 30vh;
                         position: relative;
                         overflow: hidden;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .destination-view-option{
+                            transition: .2s ease-in-out;
+                            position: absolute;
+                            z-index: 1;
+                            bottom: 10%;
+                            width: 90%;
+                            height: 0%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            overflow: hidden;
+                            .view-btn{
+                                padding: 2vh;
+                                background: var(--s2-color);
+                                text-align: center;
+                                text-transform: uppercase;
+                                font-size: var(--text-font-size);
+                                font-family: var(--header);
+                            }
+                        }
                         .destination-photo{
                             width: 100%;
                             height: 100%;
@@ -304,12 +548,12 @@ body{
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                            background: rgba($color: black, $alpha: 0.3);
+                            background: rgba($color: black, $alpha: 0.5);
                             .destination-name{
                                 padding: 2vh;
                                 text-align: center;
                                 text-transform: uppercase;
-                                font-size: 7vh;
+                                font-size: 3vh;
                                 color:var(--s2-color);
                                 font-family: var(--header);
                                 text-shadow: .5vh .5vh var(--shadow);
@@ -330,7 +574,7 @@ body{
             justify-content: center;
             background: var(--s2-color);
             .footer-whole{
-                width: 60%;
+                width: var(--p-width);
                 height: 100%;
                 display: flex;
                 align-items: center;

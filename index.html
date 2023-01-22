@@ -21,6 +21,8 @@
 </head>
 <body>
   <section class="everything">
+    <!--Start of Search thing-->
+    <section class="search-part">
     <!--Start of nav-->
     <div class="nav-bar">
       <nav>
@@ -35,26 +37,41 @@
       </nav>
     </div>
     <!--End of nav bar-->
-    <!--Start of Search thing-->
-    <section class="search-part">
       <div class="search-whole">
         <div class="search-header">
           <div class="top-header">
-            Search your heaven
+            Search your roof
           </div>
           <div class="sub-header">
             with us here!
           </div>
         </div>
         <div class="location-part">
+          <!--Start of location picker-->
             <div class="location-picker">
-              <input placeholder="Going to" type="text">
+              <input type="text" required="required">
+              <div class="place-holder">
+                <img src="images/pin.png" alt="pin">
+                Select your location
+              </div>
             </div>
+            <!--Start of Check in out Selector-->
             <div class="check-in-out-selector">
-              <input type="month"  class="check-in" name="" id="">
+              <input type="text" required="required">
+              <div class="place-holder">
+                Check-In & Check-Out
+              </div>
             </div>
+            <!--Start of Guest Number Selector-->
+            <div class="guest-counter">
+              <input type="text" required="required">
+              <div class="place-holder">
+                No. of Guest
+              </div>
+            </div>
+            <!--Start of Search button-->
             <div class="search-button">
-              <img src="loupe.png" alt="search" srcset="">
+              <img src="images/loupe.png" alt="search" srcset="">
             </div>
         </div>
       </div>
@@ -74,6 +91,9 @@
         <div class="offer-details">
 
           <div class="offers">
+            <div class="offers-overlay">
+
+            </div>
             <div class="offers-header">
               Get 20% OFF Now
             </div>
@@ -83,6 +103,9 @@
           </div>
 
           <div class="offers">
+            <div class="offers-overlay">
+              
+            </div>
             <div class="offers-header">
               Free Breakfast
             </div>
@@ -95,6 +118,111 @@
       </div>
     </section>
     <!--End of Offers-->
+    <!--Start of Hotel Part-->
+    <section class="hotel-part">
+      <div class="hotel-part-whole">
+        <!--Start of Popular Hotel-->
+        <div class="popular-part">
+          <!--HEader-->
+          <div class="popular-part-header">
+            <div class="popular-part-top-header">
+              Popular Right Now!
+            </div>
+            <div class="popular-part-sub-header">
+              Visit some of the trends at the moment
+            </div>
+          </div>
+          <!--Popular hotels-->
+          <div class="popular-hotels">
+
+            <div class="hotel">
+              <!--Hotel Image-->
+              <div class="hotel-image">
+                <img src="images/hotel-1.jpg" alt="hotel">
+              </div>
+              <div class="hotel-info">
+                <!--Hotel Name and Address-->
+                <div class="hotel-name">
+                  <div class="hotel-name-part">
+                    Hotel A
+                  </div>
+                  <div class="hotel-address-part">
+                    Kathmandu
+                  </div>
+                </div>
+                <!--Hotel Price range-->
+                <div class="price-range">
+                  <div class="price-range-header">
+                    Starting from
+                  </div>
+                  <div class="price">
+                    NPR. 1,200
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hotel">
+              <!--Hotel Image-->
+              <div class="hotel-image">
+                <img src="images/hotel-2.jpg" alt="hotel">
+              </div>
+              <div class="hotel-info">
+                <!--Hotel Name and Address-->
+                <div class="hotel-name">
+                  <div class="hotel-name-part">
+                    Hotel B
+                  </div>
+                  <div class="hotel-address-part">
+                    Kathmandu
+                  </div>
+                </div>
+                <!--Hotel Price range-->
+                <div class="price-range">
+                  <div class="price-range-header">
+                    Starting from
+                  </div>
+                  <div class="price">
+                    NPR. 1,200
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hotel">
+              <!--Hotel Image-->
+              <div class="hotel-image">
+                <img src="images/hotel-3.jpg" alt="hotel">
+              </div>
+              <div class="hotel-info">
+                <!--Hotel Name and Address-->
+                <div class="hotel-name">
+                  <div class="hotel-name-part">
+                    Hotel C
+                  </div>
+                  <div class="hotel-address-part">
+                    Chitwan
+                  </div>
+                </div>
+                <!--Hotel Price range-->
+                <div class="price-range">
+                  <div class="price-range-header">
+                    Starting from
+                  </div>
+                  <div class="price">
+                    NPR. 1,200
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!--End of Popular Hotel-->
+
+      </div>
+    </section>
+    <!--End of Hotel Part-->
     <!--Start of Destinations-->
     <section class="destination-part">
       <div class="destination-part-whole">
@@ -109,11 +237,16 @@
         <div class="destination-list">
 
           <div class="destination">
+            <div class="destination-view-option">
+              <div class="view-btn">
+                View Hotels
+              </div>
+            </div>
             <div class="destination-photo">
               <div class="black-overlay">
                 
               </div>
-              <img src="pokhara.jpg" alt="">
+              <img src="images/pokhara.jpg" alt="">
             </div>
             <div class="destination-info">
               <div class="destination-name">
@@ -123,11 +256,16 @@
           </div>
 
           <div class="destination">
+            <div class="destination-view-option">
+              <div class="view-btn">
+                View Hotels
+              </div>
+            </div>
             <div class="destination-photo">
               <div class="black-overlay">
                 
               </div>
-              <img src="lalitpur.jpg" alt="">
+              <img src="images/lalitpur.jpg" alt="">
             </div>
             <div class="destination-info">
               <div class="destination-name">
@@ -137,11 +275,16 @@
           </div>
           
           <div class="destination">
+            <div class="destination-view-option">
+              <div class="view-btn">
+                View Hotels
+              </div>
+            </div>
             <div class="destination-photo">
               <div class="black-overlay">
                 
               </div>
-              <img src="kathmandu.jpg" alt="">
+              <img src="images/kathmandu.jpg" alt="">
             </div>
             <div class="destination-info">
               <div class="destination-name">
@@ -151,15 +294,58 @@
           </div>
 
           <div class="destination">
+            <div class="destination-view-option">
+              <div class="view-btn">
+                View Hotels
+              </div>
+            </div>
             <div class="destination-photo">
               <div class="black-overlay">
                 
               </div>
-              <img src="mustang.jpg" alt="">
+              <img src="images/chitwan.jpg" alt="">
             </div>
             <div class="destination-info">
               <div class="destination-name">
-                Mustang
+                Chitwan
+              </div>
+            </div>
+          </div>
+
+          <div class="destination">
+            <div class="destination-view-option">
+              <div class="view-btn">
+                View Hotels
+              </div>
+            </div>
+            <div class="destination-photo">
+              <div class="black-overlay">
+                
+              </div>
+              <img src="images/bhaktapur.jpg" alt="">
+            </div>
+            <div class="destination-info">
+              <div class="destination-name">
+                Bhaktapur
+              </div>
+            </div>
+          </div>
+
+          <div class="destination">
+            <div class="destination-view-option">
+              <div class="view-btn">
+                View Hotels
+              </div>
+            </div>
+            <div class="destination-photo">
+              <div class="black-overlay">
+                
+              </div>
+              <img src="images/nagarkot.jpg" alt="">
+            </div>
+            <div class="destination-info">
+              <div class="destination-name">
+                Nagarkot
               </div>
             </div>
           </div>
@@ -208,5 +394,6 @@
     </footer>
     <!--End of footer-->
   </section>
+  <script src="scripts/view-hotel.js"></script>
 </body>
 </html>

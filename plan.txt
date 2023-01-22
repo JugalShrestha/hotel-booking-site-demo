@@ -1,0 +1,23 @@
+MeroStay
+
+-Tourism
+-Hotel Booking
+
+Nav BAR:
+    -Logo
+    -List your property
+    -Support
+    -Sign-in
+        -Sign-out
+
+Search Section:
+    -location
+    -CheckIn CheckOut
+    -No. of guest
+    -Search button
+
+Offer Section: 
+    -offers
+
+Destinations Section:
+    -Destinations
