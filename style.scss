@@ -34,7 +34,7 @@ body{
             padding: 1vh;
             align-items: center;
             justify-content: center;
-            border-bottom: .2vh solid var(--p2-color);
+            background: var(--s2-color);
             nav{
                 width: 60%;
                 padding: 1vh;
@@ -61,27 +61,30 @@ body{
         //Start of search part
         .search-part{
             width: 100%;
-            padding: 10vh 1vh;
+            height: 30vh;
+            position: relative;
+            margin-bottom: 10vh;
+            padding: 2vh 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            background: var(--s2-color);
             .search-whole{
                 width: 60%;
                 padding: 2vh;
                 border-radius: 2vh;
-                border: .2vh solid var(--p2-color);
                 display: flex;
                 flex-direction: column;
-                gap:2vh;
+                gap:6vh;
                 align-items: center;
                 justify-content: center;
                 .search-header{
                     display: flex;
-                    flex-direction: row;
-                    align-items: center;
+                    flex-direction: column;
+                    align-items: flex-start;
                     justify-content: flex-start;
-                    gap: 2vh;
+                    gap: 0vh;
                     width: 100%;
                     .top-header{
                         display: flex;
@@ -101,53 +104,53 @@ body{
                     }
                 }
                 .location-part{
-                    width:100%;
-                    padding: 2vh 0;
+                    width:60%;
+                    height: 7vh;
+                    position: absolute;
+                    bottom: -10%;
+                    left: 50%;
+                    transform: translate(-50%,10%);
+                    background: var(--s-color);
+                    box-shadow: 0vh 0vh 1vh var(--shadow);
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    gap: 5vh;
+                    overflow: hidden;
                     .location-picker{
-                        width: 60%;
-                        height: 3vh;
+                        width: 100%;
+                        height: 100%;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         input{
                             width: 100%;
-                            border-radius: 1vh;
-                            border: .1vh solid var(--p-color);
                             height: 100%;
-                            padding: 1vh;
                             text-align: left;
                             font-size: 1.7vh;
                             font-family: var(--text);
                         }
                     }
                     .check-in-out-selector{
-                        height: 3vh;
-                        width: 20%;
+                        height: 100%;
+                        width: 40%;
                         display: flex;
                         align-items:center;
                         justify-content: center;
                         gap:1vh;
                         input{
                             width: 100%;
-                            border-radius: 1vh;
-                            border: .1vh solid var(--p-color);
                             height: 100%;
-                            padding: 1vh;   
                             font-size: 1.7vh;
+                            text-align: center;
                             font-family: var(--text);
                         }
                     }
                     .search-button{
-                        width: 7vh;
+                        width: 10%;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        height: 7vh;
-                        border-radius: 100%;
+                        height: 100%;
                         background:var(--s2-color);
                         font-size: 2vh;
                         color:var(--s-color);
